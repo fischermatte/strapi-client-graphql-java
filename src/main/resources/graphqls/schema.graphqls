@@ -5,7 +5,7 @@ schema {
     mutation: Mutation
 }
 
-union GenericMorph = EmailTemplate | I18NLocale | UploadFile | UploadFolder | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsUser
+union GenericMorph = EmailTemplate | I18NLocale
 
 type EmailTemplate {
     createdAt: DateTime
@@ -82,10 +82,14 @@ type ResponseCollectionMeta {
     pagination: Pagination!
 }
 
+enum ENUM_EMAILTEMPLATE_EMAIL_TYPE {
+    SCREENING_PARA_BUCHUNG
+    SCREENING_PILOT_BUCHUNG
+}
 
-
-type UsersPermissionsUpdateRolePayload {
-    ok: Boolean!
+enum PublicationState {
+    LIVE
+    PREVIEW
 }
 
 "A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
@@ -96,33 +100,6 @@ scalar I18NLocaleCode
 
 "The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
 scalar JSON
-
-"The `Upload` scalar type represents a file upload."
-scalar Upload
-
-input BooleanFilterInput {
-    and: [Boolean]
-    between: [Boolean]
-    contains: Boolean
-    containsi: Boolean
-    endsWith: Boolean
-    eq: Boolean
-    eqi: Boolean
-    gt: Boolean
-    gte: Boolean
-    in: [Boolean]
-    lt: Boolean
-    lte: Boolean
-    ne: Boolean
-    not: BooleanFilterInput
-    notContains: Boolean
-    notContainsi: Boolean
-    notIn: [Boolean]
-    notNull: Boolean
-    null: Boolean
-    or: [Boolean]
-    startsWith: Boolean
-}
 
 input DateTimeFilterInput {
     and: [DateTime]
@@ -168,6 +145,36 @@ input EmailTemplateInput {
     message: String
     publishedAt: DateTime
     subject: String
+}
+
+input FileInfoInput {
+    alternativeText: String
+    caption: String
+    name: String
+}
+
+input FloatFilterInput {
+    and: [Float]
+    between: [Float]
+    contains: Float
+    containsi: Float
+    endsWith: Float
+    eq: Float
+    eqi: Float
+    gt: Float
+    gte: Float
+    in: [Float]
+    lt: Float
+    lte: Float
+    ne: Float
+    not: FloatFilterInput
+    notContains: Float
+    notContainsi: Float
+    notIn: [Float]
+    notNull: Boolean
+    null: Boolean
+    or: [Float]
+    startsWith: Float
 }
 
 input I18NLocaleFiltersInput {
@@ -283,9 +290,3 @@ input StringFilterInput {
     or: [String]
     startsWith: String
 }
-
-
-
-
-
-
