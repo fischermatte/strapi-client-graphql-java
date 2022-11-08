@@ -88,17 +88,17 @@
                         <customScalar>
                             <graphQLTypeName>DateTime</graphQLTypeName>
                             <javaType>java.util.Date</javaType>
-                            <graphQLScalarTypeStaticField>com.graphql_java_generator.customscalars.GraphQLScalarTypeDate.DateTime</graphQLScalarTypeStaticField>
+                            <graphQLScalarTypeStaticField>com.graphql_java_generator.customscalars.GraphQLScalarTypeDateTime.DateTime</graphQLScalarTypeStaticField>
                         </customScalar>
                         <customScalar>
                             <graphQLTypeName>I18NLocaleCode</graphQLTypeName>
                             <javaType>java.lang.Object</javaType>
-                            <graphQLScalarTypeStaticField>graphql.scalars.object.OBJECT_COERCING</graphQLScalarTypeStaticField>
+                            <graphQLScalarTypeStaticField>com.graphql_java_generator.customscalars.GraphQLScalarTypeString.String</graphQLScalarTypeStaticField>
                         </customScalar>
                         <customScalar>
                             <graphQLTypeName>JSON</graphQLTypeName>
                             <javaType>java.lang.Object</javaType>
-                            <graphQLScalarTypeStaticField>graphql.scalars.object.JsonScalar</graphQLScalarTypeStaticField>
+                            <graphQLScalarTypeStaticField>graphql.scalars.object.JsonScalar.INSTANCE</graphQLScalarTypeStaticField>
                         </customScalar>
                     </customScalars>
                 </configuration>

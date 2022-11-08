@@ -120,7 +120,6 @@ input DateTimeFilterInput {
     notContainsi: DateTime
     notIn: [DateTime]
     notNull: Boolean
-    null: Boolean
     or: [DateTime]
     startsWith: DateTime
 }
@@ -172,7 +171,6 @@ input FloatFilterInput {
     notContainsi: Float
     notIn: [Float]
     notNull: Boolean
-    null: Boolean
     or: [Float]
     startsWith: Float
 }
@@ -207,7 +205,6 @@ input IDFilterInput {
     notContainsi: ID
     notIn: [ID]
     notNull: Boolean
-    null: Boolean
     or: [ID]
     startsWith: ID
 }
@@ -231,7 +228,6 @@ input IntFilterInput {
     notContainsi: Int
     notIn: [Int]
     notNull: Boolean
-    null: Boolean
     or: [Int]
     startsWith: Int
 }
@@ -255,7 +251,6 @@ input JSONFilterInput {
     notContainsi: JSON
     notIn: [JSON]
     notNull: Boolean
-    null: Boolean
     or: [JSON]
     startsWith: JSON
 }
@@ -286,7 +281,6 @@ input StringFilterInput {
     notContainsi: String
     notIn: [String]
     notNull: Boolean
-    null: Boolean
     or: [String]
     startsWith: String
 }
