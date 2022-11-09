@@ -35,6 +35,11 @@
             <artifactId>graphql-java-extended-scalars</artifactId>
             <version>19.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -83,22 +88,29 @@
                         <customScalar>
                             <graphQLTypeName>Date</graphQLTypeName>
                             <javaType>java.util.Date</javaType>
-                            <graphQLScalarTypeStaticField>com.graphql_java_generator.customscalars.GraphQLScalarTypeDate.Date</graphQLScalarTypeStaticField>
+                            <graphQLScalarTypeStaticField>
+                                com.graphql_java_generator.customscalars.GraphQLScalarTypeDate.Date
+                            </graphQLScalarTypeStaticField>
                         </customScalar>
                         <customScalar>
                             <graphQLTypeName>DateTime</graphQLTypeName>
                             <javaType>java.util.Date</javaType>
-                            <graphQLScalarTypeStaticField>com.graphql_java_generator.customscalars.GraphQLScalarTypeDateTime.DateTime</graphQLScalarTypeStaticField>
+                            <graphQLScalarTypeStaticField>
+                                com.graphql_java_generator.customscalars.GraphQLScalarTypeDateTime.DateTime
+                            </graphQLScalarTypeStaticField>
                         </customScalar>
                         <customScalar>
                             <graphQLTypeName>I18NLocaleCode</graphQLTypeName>
                             <javaType>java.lang.Object</javaType>
-                            <graphQLScalarTypeStaticField>com.graphql_java_generator.customscalars.GraphQLScalarTypeString.String</graphQLScalarTypeStaticField>
+                            <graphQLScalarTypeStaticField>
+                                com.graphql_java_generator.customscalars.GraphQLScalarTypeString.String
+                            </graphQLScalarTypeStaticField>
                         </customScalar>
                         <customScalar>
                             <graphQLTypeName>JSON</graphQLTypeName>
                             <javaType>java.lang.Object</javaType>
-                            <graphQLScalarTypeStaticField>graphql.scalars.object.JsonScalar.INSTANCE</graphQLScalarTypeStaticField>
+                            <graphQLScalarTypeStaticField>graphql.scalars.object.JsonScalar.INSTANCE
+                            </graphQLScalarTypeStaticField>
                         </customScalar>
                     </customScalars>
                 </configuration>
